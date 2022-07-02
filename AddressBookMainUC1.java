@@ -1,77 +1,87 @@
-package com.bridgelabz.day9;
-
+package com.bridgelabz.addressbook;
+//Ability to create a Contacts in Address Book with first and last names, address, city, state, zip, phone number and email… 
 import java.util.Scanner;
 
 public class AddressBookMainUC1 {
     public static void main(String[] args) {
-        System.out.println("Contact details of the person:");
-        PersonDetails pd = new PersonDetails();
-        pd.getDetails();
+        AddressBookMainUC1 contact = new AddressBookMainUC1();
+        contact.display();
+    }
+    Scanner sc = new Scanner(System.in);
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String city;
+    private String state;
+    private int zipCode;
+    private int phoneNumber;
+    private String emailId;
 
+    public String getFirstName(){
+        return firstName;
+    }
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public String getLastName(){
+        return lastName;
+    }
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    public String getAddress(){
+        return address;
+    }
+    public void setAddress(String address){
+        this.address = address;
+    }
+    public String getCity(){
+        return city;
+    }
+    public void setCity(String city){
+        this.city = city;
+    }
+    public String getState(){
+        return state;
+    }
+    public void setState(String state){
+        this.state = state;
+    }
+    public int getZipCode(){
+        return zipCode;
+    }
+    public void setZipCode(int zipCode){
+        this.zipCode = zipCode;
+    }
+    public int getPhoneNumber(){
+        return phoneNumber;
+    }
+    public void setPhoneNumber(int phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+    public String getEmailId(){
+        return emailId;
+    }
+    public void setEmailId(String emailId){
+        this.emailId = emailId;
+    }
+    public void display() {
+        System.out.println("Enter your First name: ");
+        setFirstName(sc.nextLine());
+        System.out.println("Enter your Last name: ");
+        setLastName(sc.nextLine());
+        System.out.println("Enter your Address: ");
+        setAddress(sc.nextLine());
+        System.out.println("Enter your City: ");
+        setCity(sc.nextLine());
+        System.out.println("Enter your State: ");
+        setState(sc.nextLine());
+        System.out.println("Enter your ZipCode: ");
+        setZipCode(sc.nextInt());
+        System.out.println("Enter your Phone Number: ");
+        setPhoneNumber(sc.nextInt());
+        System.out.println("Enter your Email Id: ");
+        setEmailId(sc.nextLine());
     }
 }
-class Name{
-    public void printName(){
-        System.out.println("Enter name of the Person: ");
-    }
-}
-class Address {
-    public void printAddress() {
-        System.out.println("Enter Address of the Person: ");
-    }
-}
-class City {
-    public void printCity() {
-        System.out.println("Enter City: ");
-    }
-}
-class State {
-    public void printState() {
-        System.out.println("Enter State : ");
-    }
-}
-class ZipCode {
-    public void printZipCode() {
-        System.out.println("Enter Zipcode of the Area: ");
-    }
-}
-class PhoneNumber {
-    public void printPhoneNumber() {
-        System.out.println("Enter Phone Number of the Person: ");
-    }
-}
-class Email {
-    public void printEmailId() {
-        System.out.println("Enter email Id of the Person: ");
-    }
-}
-class PersonDetails{
-    public void getDetails(){
-        Scanner sc = new Scanner(System.in);
-        Name name = new Name();
-        name.printName();
-        sc.nextLine();
-        Address address = new Address();
-        address.printAddress();
-        sc.nextLine();
-        City name1 = new City();
-        name1.printCity();
-        sc.nextLine();
-        State name2 = new State();
-        name2.printState();
-        sc.nextLine();
-        ZipCode name3 = new ZipCode();
-        name3.printZipCode();
-        sc.nextInt();
 
-        Scanner num = new Scanner(System.in);
-        PhoneNumber name4 = new PhoneNumber();
-        name4.printPhoneNumber();
-        num.nextInt();
-
-        Scanner sc2 = new Scanner(System.in);
-        Email name5 = new Email();
-        name5.printEmailId();
-        sc2.nextLine();
-    }
-}
